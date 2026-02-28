@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>hover4</title>
+    <style>
+        *{margin: 0;padding: 0;border: 0}
+        ul,li{list-style: none}
+        div{width: 350px;height: 300px;overflow: hidden;
+            position: relative;
+            background-color: #d42525
+        }
+        div>h1{
+            position: absolute;top: 230px;left: 0;
+            font-size: 24px;line-height: 30px;font-weight: 200;color: #fff;text-indent: 30px;z-index: 4;
+            transition: all 0.5s 0s
+        }
+        
+        div>p.txt{
+            font-size: 14px;line-height: 60px;color: #fff;text-indent: 30px;
+            position: absolute;bottom: -60px;left: 0;z-index: 3;
+            transition: all 0.3s 0s;
+            opacity: 0;
+        }
+        div>p.bg{width: 350px;height: 60px;
+            background-color: #49293a;
+            position: absolute;bottom: -60px;left: 0;z-index: 2;
+            transition: all 0.3s 0s
+        }
+        div>p.img{
+            position: absolute;top: 0;left: 0;z-index: 1;
+            opacity: 0.9;
+            transition: all 0.3s 0s;
+        }
+        
+        /* hover */
+        div:hover h1{top: 170px;}
+        div:hover p.txt{bottom: 0;opacity: 1}
+        div:hover p.bg{bottom: 0;}
+        div:hover p.img{top: -60px;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>LOVE THE <strong>WAY</strong> YOU <strong>LIE</strong></h1>
+        <p class="txt">I can only tell you what it fells like.</p>
+        <p class="bg"></p>
+        <p class="img"><img src="../../img/trans-bg3.jpg" alt="눈오는밤"></p>
+    </div>
+</body>
+</html>

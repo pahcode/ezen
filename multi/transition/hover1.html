@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>hover2</title>
+    <style>
+        * {margin: 0;padding: 0;border: 0}
+        ul,li{list-style: none}
+        div{width: 350px;height: 300px;overflow: hidden;
+            position: relative;
+            background-color: #fff
+        }
+        div>h1{width: 350px;
+            position: absolute;top: 130px;left: 0;z-index: 3;
+            font-size: 26px;font-weight: 200;color: #fff;text-align: center;
+            transition: all 0.5s 0s
+        }
+        div>p.txt{width: 350px;
+            padding: 0 40px;box-sizing: border-box;
+            position: absolute;top: 145px;left: 0;z-index: 2;
+            font-size: 14px;color: rgba(255,255,255,0.8);text-align: center;
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.5s 0.1s
+        }
+        div>p.img{
+            position: absolute;top: -20px;left: 0;z-index: 1;
+            opacity: 1;
+            transition: all 0.5s 0s
+        }
+        div>ul{width: 350px;height: 300px;
+            position: absolute;top: 0;left: 0;z-index: 4;
+        }
+        div>ul>li{
+            position: absolute;
+            background-color: #fff;
+            transition: all 0.5s 0s
+        }
+        div>ul>li:nth-child(1){width: 0;height:1px;top: 20px;left: 20px;}
+        div>ul>li:nth-child(2){width: 1px;height: 0;top: 20px;right: 20px;}
+        div>ul>li:nth-child(3){width: 0;height:1px;bottom: 20px;left: 20px;}
+        div>ul>li:nth-child(4){width: 1px;height: 0;top:20px;left:20px;}
+        
+        /* hover */
+        div:hover h1{top: 100px}
+        div:hover p.txt{transform: scale(1);opacity: 1}
+        div:hover p.img{top: 0;opacity: 0.7}
+        div:hover ul>li:nth-child(1){width: 310px;height:1px;}
+        div:hover ul>li:nth-child(2){width: 1px;height: 260px;}
+        div:hover ul>li:nth-child(3){width: 310px;height:1px;}
+        div:hover ul>li:nth-child(4){width: 1px;height: 260px;}
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>THE <strong>FIREWORK</strong></h1>
+        <p class="txt">The night ends<br>
+with a firework display.</p>
+        <p class="img"><img src="img/bg1.jpg" alt="불꽃놀이"></p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
